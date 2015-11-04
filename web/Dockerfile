@@ -16,4 +16,5 @@ ADD . /code
 
 EXPOSE 5000
 
-CMD python app.py
+ADD app.py /code/app.py
+CMD python /code/app.py
