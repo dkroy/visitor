@@ -1,0 +1,26 @@
+web:
+    restart: always
+    build: web
+    volumes:
+        - web:/code
+    expose:
+        - "5000"
+    links:
+        - redis
+    env_file: .env
+    command: python app.py
+redis:
+    image: redis:2.8.19
+    ports:
+        - "6379:6379"
+nginx:
+  restart: always
+  build: ./nginx/
+  ports:
+    - "80:80"
+  volumes:
+    - /www/static
+  volumes_from:
+    - web
+  links:
+    - web:web
