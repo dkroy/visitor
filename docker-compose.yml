@@ -1,14 +1,11 @@
 web:
     restart: always
     build: ./web
-    volumes:
-        - web:/code
-    expose:
-        - "5000"
+    ports:
+        - "5000:5000"
     links:
         - redis
     env_file: .env
-    command: python app.py
 redis:
     image: redis
     ports:
