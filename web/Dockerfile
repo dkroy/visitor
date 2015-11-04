@@ -13,3 +13,7 @@ RUN pip install -r /code/requirements.txt
 # set working diretory
 WORKDIR /code
 ADD . /code
+
+EXPOSE 5000
+
+CMD python app.py
