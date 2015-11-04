@@ -10,7 +10,7 @@ web:
     env_file: .env
     command: python app.py
 redis:
-    image: redis:2.8.19
+    image: redis
     ports:
         - "6379:6379"
 nginx:

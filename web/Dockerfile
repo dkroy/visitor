@@ -1,5 +1,5 @@
 # start with a base image
-FROM ubuntu:14.10
+FROM ubuntu:14.04
 
 # install dependencies
 RUN apt-get -y update
@@ -12,3 +12,4 @@ RUN pip install -r /code/requirements.txt
 
 # set working diretory
 WORKDIR /code
+ADD . /code
