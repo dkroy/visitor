@@ -8,8 +8,8 @@
 # Docker Run On Server (Ubuntu)
 ```
 $ sudo service docker start # If not already running
-$ docker-compose build
-$ docker-compose up -d
+$ sudo docker-compose build
+$ sudo docker-compose up -d
 ```
 
 # Docker Run Locally (Mac)
